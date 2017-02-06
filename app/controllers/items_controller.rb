@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :logged_in_user , except: [:show]
+  before_action :logged_in_user, only: [:new], except: [:show]
   before_action :set_item, only: [:show]
 
   def new
@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
         imageFlag: 1,
       )
       @items = response.first(20)
+      # binding.pry
     end
   end
 
