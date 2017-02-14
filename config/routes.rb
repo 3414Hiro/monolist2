@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'rankings/index'
+  get 'rankings/have'
+  get 'rankings/want'
 
   root 'welcome#index'
 
